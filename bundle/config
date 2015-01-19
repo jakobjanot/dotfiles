@@ -1,0 +1,6 @@
+---
+#BUNDLE_PATH: vendor/bundle
+BUNDLE_BUILD__NOKOGIRI: "--use-system-libraries"
+#BUNDLE_BUILD__NOKOGIRI: "--use-system-libraries --with-xslt-include=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/include/libxslt --with-xml2-include=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/include/libxml2"
+BUNDLE_BUILD__LIBV8: "--with-system-v8"
+BUNDLE_CONSOLE: pry
