@@ -3,6 +3,7 @@
 echo "Backup"
 
 mkdir ~/dotfiles_backup
+
 mv ~/.profile ~/dotfiles_backup
 mv ~/.bash_aliases ~/dotfiles_backup
 mv ~/.bash ~/dotfiles_backup

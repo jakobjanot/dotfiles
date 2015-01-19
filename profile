@@ -1,4 +1,3 @@
-HERE=$(pwd)
 export PATH=/usr/local/bin:$PATH
 export PATH=~/bin:$PATH
 
@@ -14,7 +13,7 @@ export HOMEBREW_GITHUB_API_TOKEN=8005534e6decc77333b2baef4810d73c295f9994
 # java home
 export JAVA_HOME=$(/usr/libexec/java_home)
 
-export GITAWAREPROMPT="$HERE/git-aware-prompt"
+export GITAWAREPROMPT="$HOME/dotfiles/git-aware-prompt"
 source $GITAWAREPROMPT/main.sh
 export PS1="\w \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ "
 
