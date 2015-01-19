@@ -20,6 +20,3 @@ ln -s dotfiles/atom ~/.atom
 ln -s dotfiles/gitignore ~/.gitignore
 ln -s dotfiles/gitconfig ~/.gitconfig
 ln -s dotfiles/bundle ~/.bundle
-
-echo "Installing atom packages"
-apm stars --user jakobjanot --install
