@@ -1,3 +1,4 @@
+DOTFILES_HOME=$HOME/dotfiles
 export PATH=~/bin:~/usr/local/bin:$PATH
 
 export EDITOR="atom -W"
@@ -11,7 +12,7 @@ export HOMEBREW_GITHUB_API_TOKEN=8005534e6decc77333b2baef4810d73c295f9994
 # java home
 export JAVA_HOME=$(/usr/libexec/java_home)
 
-export GITAWAREPROMPT="$HOME/dotfiles/git-aware-prompt"
+export GITAWAREPROMPT="$DOTFILES_HOME/git-aware-prompt"
 source $GITAWAREPROMPT/main.sh
 export PS1="\w \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ "
 
@@ -31,8 +32,8 @@ export RUBOCOP_HOME=/Users/u0157312/.rvm/gems/ruby-2.1.5/bin #"$(dirname $(which
 export PATH="$RUBOCOP_HOME:$PATH"
 
 # bash aliases
-if [ -f ~/.bash_aliases ]; then
-. ~/.bash_aliases
+if [ -f $DOTFILES_HOME/bash_aliases ]; then
+. $DOTFILES_HOME/bash_aliases
 fi
 
 # bash completion

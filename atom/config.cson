@@ -60,5 +60,6 @@
   minimap:
     plugins:
       "git-diff": false
+      "find-and-replace": true
   "exception-reporting":
     userId: "a4a55f6f-1ff7-b833-f93c-47179635b0e7"
