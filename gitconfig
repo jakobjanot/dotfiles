@@ -1,9 +1,7 @@
+[include]
+	path = ~/.gitconfig.local
 [core]
-	excludesfile = /Users/u0157312/.gitignore
-	editor = atom --wait
-[user]
-	name = Jakob Kofoed Janot
-	email = jakob@janot.dk
+	excludesfile = ~/.gitignore
 [color]
 	ui = true
 	branch = auto
@@ -22,12 +20,6 @@
 	ls = log --pretty=format:\"%C(red)%cr%C(blue) %h %C(reset)%an %Cgreen%d%x09%Cblue%s %C(yellow)(%ad)\" --abbrev-commit --decorate=short --date=local
 [svn]
 	rmdir = true
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
 [push]
 	default = current
 [filter "media"]
