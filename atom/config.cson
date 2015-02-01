@@ -1,60 +1,64 @@
-'*':
-  'exception-reporting':
-    'userId': '58e153d5-ef7d-80bc-2e02-20a7bd1b2d55'
-  'welcome':
-    'showOnStartup': false
-  'metrics':
-    'userId': '7c131f6a622776f583a45b1ceaa6c37db1b249aa'
-  'core':
-    'disabledPackages': [
-      'symbols-view'
-      'atom-alignment'
+"*":
+  welcome:
+    showOnStartup: false
+  core:
+    ignoredNames: [
+      ".git"
+      ".svn"
+      ".DS_Store"
     ]
-    'themes': [
-      'atom-dark-ui'
-      'monokai'
+    disabledPackages: [
+      "symbols-view"
+      "atom-alignment"
+      "metrics"
     ]
-    'projectHome': '~/src'
-  'goto':
-    'logToConsole': true
-  'editor':
-    'showIndentGuide': true
-    'invisibles': {}
-  'seeing-is-believing':
-    'ruby-command': '/Users/u0157312/.rvm/bin/sib_ruby'
-    'add-to-env': {}
-  'fuzzy-finder':
-    'ignoredNames': [
-      '**/vendor/bundle/**/*'
+    themes: [
+      "atom-dark-ui"
+      "monokai"
     ]
-  'ruby-test': {}
-  'autocomplete-plus': {}
-  'merge-conflicts': {}
-  'atom-lint':
-    'rubocop':
-      'path': '/Users/u0157312/.rvm/gems/ruby-2.1.5/bin/rubocop'
-      'ignoredNames': [
-        'vendor/**'
-        'db/schema.rb'
+    projectHome: "~/src"
+  goto:
+    logToConsole: true
+  editor:
+    showIndentGuide: true
+    invisibles: {}
+  "seeing-is-believing":
+    "ruby-command": "ruby"
+    "add-to-env": {}
+  "fuzzy-finder":
+    ignoredNames: [
+      "**/vendor/bundle/**/*"
+    ]
+  "ruby-test": {}
+  "autocomplete-plus": {}
+  "merge-conflicts": {}
+  "atom-lint":
+    ignoredNames: [
+      "tmp/**"
+    ]
+    rubocop:
+      path: "rubocop"
+      ignoredNames: [
+        "vendor/**"
+        "db/schema.rb"
       ]
-    'jshint':
-      'path': '/usr/local/bin/jshint'
-    'coffeelint':
-      'path': '/usr/local/bin/coffeelint'
-    'csslint':
-      'path': '/usr/local/bin/csslint'
-      'rules':
-        'ignore': [
-          'adjoining-classes'
+    jshint:
+      path: "jshint"
+    coffeelint:
+      path: "coffeelint"
+    csslint:
+      path: "csslint"
+      rules:
+        ignore: [
+          "adjoining-classes"
         ]
-        'errors': []
-        'warnings': []
-    'scss-lint':
-      'path': '/Users/u0157312/.rvm/gems/ruby-2.1.5/bin/scss-lint'
-  'markdown-preview': {}
-  'localization':
-    'CurrentLanguage': 'Default'
-  'minimap':
-    'plugins':
-      'git-diff': true
-      'find-and-replace': true
+    "scss-lint":
+      path: "scss-lint"
+  "markdown-preview": {}
+  localization:
+    CurrentLanguage: "Default"
+  minimap:
+    plugins:
+      "git-diff": false
+  "exception-reporting":
+    userId: "a4a55f6f-1ff7-b833-f93c-47179635b0e7"

@@ -1,5 +1,4 @@
-export PATH=/usr/local/bin:$PATH
-export PATH=~/bin:$PATH
+export PATH=~/bin:~/dotfiles/bin:~/usr/local/bin:$PATH
 
 export EDITOR="atom -W"
 
