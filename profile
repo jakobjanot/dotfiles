@@ -4,6 +4,9 @@ export PATH=~/bin:~/usr/local/bin:$PATH
 export EDITOR="atom -W"
 export VISUAL="atom -W"
 
+# Replace bsdtar with gnutar
+export PATH="/usr/local/opt/gnu-tar/libexec/gnubin:$PATH"
+
 # Color OS X Command Prompt
 export CLICOLOR=1export 
 export LSCOLORS=dxfxcxdxbxegedabagacad
@@ -65,7 +68,7 @@ if [ -f $(brew --prefix)/etc/bash_completion ]; then
 fi
 
 # oracle instantclient
-ORACLE_HOME="$HOME/tools/instantclient_11_2"
+ORACLE_HOME="$HOME/utils/instantclient_11_2"
 if [ -d $ORACLE_HOME ]; then
 	export NLS_LANG="AMERICAN_AMERICA.UTF8" # or DANISH_DENMARK.WE8ISO8859P1
 	export DYLD_LIBRARY_PATH="$DYLD_LIBRARY_PATH:$ORACLE_HOME"
