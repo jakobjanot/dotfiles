@@ -12,8 +12,9 @@ mv ~/.bundle ~/dotfiles_backup
 
 echo "Creating symlinks"
 
-ln -s dotfiles/profile ~/.profile
-ln -s dotfiles/atom ~/.atom
-ln -s dotfiles/gitignore ~/.gitignore
-ln -s dotfiles/gitconfig ~/.gitconfig
-ln -s dotfiles/bundle ~/.bundle
+ln -s ~/dotfiles/profile ~/.profile
+ln -s ~/dotfiles/atom ~/.atom
+ln -s ~/dotfiles/gitignore ~/.gitignore
+ln -s ~/dotfiles/gitconfig ~/.gitconfig
+ln -s ~/dotfiles/bundle ~/.bundle
+ln -s ~/dotfiles/rvm/hooks/after_cd ~/.rvm/hooks/after_cd

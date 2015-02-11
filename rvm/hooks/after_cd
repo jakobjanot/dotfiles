@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+function rails_server {
+  printf "\e]0;${1:-$(rails runner "puts Site.current.name")} server\a"
+  KG_SITE="$1" bundle exec rails s
+  printf '\e]0;\a'
+}
+
+if [[ -s "bin/rails" || -s "script/rails" ]] && [[ -s "lib/site.rb" ]]; then
+  echo -n "Setting up aliases:"
+  for s in $(ruby -r ./lib/site.rb -e "puts Site.all" 2>/dev/null); do
+    echo -n " $s"
+    alias $s="rails_server $s"
+  done
+  unset s
+  echo ""
+fi
