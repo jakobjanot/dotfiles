@@ -17,6 +17,7 @@
       "monokai"
     ]
     projectHome: "~/src"
+    followSymlinks: true
   goto:
     logToConsole: true
   editor:
@@ -44,6 +45,8 @@
       ]
     jshint:
       path: "jshint"
+    jscs:
+      path: "$(npm bin)/jscs"
     coffeelint:
       path: "coffeelint"
     csslint:
