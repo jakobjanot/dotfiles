@@ -8,7 +8,8 @@ export VISUAL="atom -W"
 export PATH="/usr/local/opt/gnu-tar/libexec/gnubin:$PATH"
 
 # Color OS X Command Prompt
-export CLICOLOR=1export 
+export CLICOLOR=1
+#export LSCOLORS=ExFxBxDxCxegedabagacad
 export LSCOLORS=dxfxcxdxbxegedabagacad
 export HISTCONTROL=ignoredups:erasedups  # no duplicate entries
 export HISTSIZE=100000                   # big big history
@@ -45,10 +46,10 @@ export PS1="\w \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ "
 export SUDO_PS1="\[$bakred\]\u@\h\[$txtrst\] \w\$ "
 
 # rbenv
-if [ -d "$HOME/.rbenv" ]; then
-  export PATH="$HOME/.rbenv/bin:$PATH"
-  eval "$(rbenv init -)"
-fi
+#if [ -d "$HOME/.rbenv" ]; then
+#  export PATH="$HOME/.rbenv/bin:$PATH"
+#  eval "$(rbenv init -)"
+#fi
 
 # rvm
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
