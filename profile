@@ -75,3 +75,5 @@ if [ -d $ORACLE_HOME ]; then
 	export TNS_ADMIN="$ORACLE_HOME" # or where you will place tnsnames.ora
 	export PATH="$PATH:$ORACLE_HOME"
 fi
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
