@@ -1,3 +1,10 @@
+# use .localrc for SUPER SECRET CRAP that you don't
+# want in your public, versioned repo.
+if [[ -a ~/.localrc ]]
+then
+  source ~/.localrc
+fi
+
 DOTFILES_HOME=$HOME/dotfiles
 export PATH=/bin:/sbin:/usr/bin:~/bin:~/usr/local/bin:$PATH
 
@@ -32,8 +39,6 @@ shopt -s extglob
 [ "$TERM" = "xterm" ] && TERM="xterm-256color"
 
 function ppgrep() { pgrep "$@" | xargs ps -f -p; }
-
-export HOMEBREW_GITHUB_API_TOKEN=8005534e6decc77333b2baef4810d73c295f9994
 
 # python
 alias qtpython="ipython qtconsole --pylab=inline"

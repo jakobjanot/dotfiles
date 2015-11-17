@@ -1,6 +1,14 @@
+## caskroom/cask
+tap caskroom/cask
+install brew-cask
+
+## rcmdnk/file
+tap rcmdnk/file
+install brew-file
+
+# Brew packages
 brew autoconf
 brew bash-completion
-brew brew-file
 brew cmake
 brew dwdiff
 brew freetype
@@ -19,22 +27,14 @@ brew libtool
 brew node
 brew openssl
 brew ossp-uuid
-brew osxfuse
 brew pkg-config
 brew postgresql
-brew rbenv
 brew readline
 brew redis
 brew ruby-build
 brew ssh-copy-id
-brew sshfs
 brew sqlite3
 brew libyaml
-
-# tap repositories and their packages
-
-## rcmdnk/file
-tap rcmdnk/file
 
 # Cask applications
 cask adobe-air
@@ -53,3 +53,4 @@ cask xquartz
 
 # App Store applications
 appstore Dash
+appstore gapplin
