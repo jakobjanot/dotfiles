@@ -1,6 +1,8 @@
 ## Brew taps
 tap 'caskroom/cask'
 
+cask 'java'
+
 # Brew packages
 brew 'ant'
 brew 'autoconf'
