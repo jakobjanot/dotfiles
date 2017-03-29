@@ -1,7 +1,7 @@
 [include]
 	path = ~/.gitconfig.local
 [core]
-	excludesfile = ~/.gitignore
+	excludesfile = /Users/u0157312/.gitignore
 [color]
 	ui = true
 	branch = auto
@@ -26,9 +26,18 @@
 	clean = git media clean %f
 	smudge = git media smudge %f
 	required = true
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true
+[user]
+	name = Jakob Kofoed Janot
+	email = jakob.janot@karnovgroup.com
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
 [mergetool "sourcetree"]
-	cmd = /opt/homebrew-cask/Caskroom/sourcetree/2.0.4/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
+[commit]
+	template = /Users/u0157312/.stCommitMsg

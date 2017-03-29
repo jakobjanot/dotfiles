@@ -11,5 +11,16 @@ Pry.prompt = [
 proc { |obj, nest_level| "#{RUBY_ENGINE}-#{RUBY_VERSION} (#{obj})#{":#{nest_level}" if nest_level > 0}> " },
 proc { |obj, nest_level| "#{RUBY_ENGINE}-#{RUBY_VERSION} (#{obj})#{":#{nest_level}" if nest_level > 0}* " }
 ]
- 
-# etc. 
+
+Pry.config.history.file = ".pry_history"
+
+def pbcopy(data)
+  IO.popen 'pbcopy', 'w' do |io|
+    io << data
+  end
+  nil
+end
+
+def pbpaste
+  `pbpaste`
+end

@@ -3,4 +3,13 @@
 **/.rake_tasks~
 **/vendor/bundle
 atom/.apm
+**/node_modules
 repositories
+**/tags
+**/.vscode
+**/.pry_history
+**/.bundle
+**/*.sublime-project
+**/*.sublime-workspace
+**/*.*.bak
+**/*.*.old

@@ -6,9 +6,12 @@ then
 fi
 
 DOTFILES_HOME=$HOME/dotfiles
-export PATH=/bin:/sbin:/usr/bin:~/bin:~/usr/local/bin:$PATH
+export PATH=:~/bin:/usr/local/bin:/bin:/sbin:/usr/bin:$PATH
 
-alias atom="atom-beta"
+# Set language - ensure Terminal.app doesn't overwrite it
+export LC_CTYPE=da_DK.UTF-8
+export LC_ALL=da_DK.UTF-8
+
 export EDITOR="atom -W"
 export VISUAL="atom -W"
 
@@ -29,6 +32,12 @@ shopt -s extglob
 # Save and reload the history after each command finishes
 # export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 
+# Rubymotion Android SDK
+if [ -d "$HOME/.rubymotion-android" ]; then
+  export RUBYMOTION_ANDROID_SDK="$HOME/.rubymotion-android/sdk"
+  export RUBYMOTION_ANDROID_NDK="$HOME/.rubymotion-android/ndk"
+fi
+
 # docker
 #if [ -d "$HOME/.boot2docker" ]; then
 #  export DOCKER_TLS_VERIFY=1
@@ -40,18 +49,13 @@ shopt -s extglob
 
 function ppgrep() { pgrep "$@" | xargs ps -f -p; }
 
-# python
-alias qtpython="ipython qtconsole --pylab=inline"
-export PATH="~/bin:/usr/local/bin:/usr/local/sbin:$PATH"
-export PYTHONPATH=$(brew --prefix)/lib/python2.7/site-packages:$PYTHONPATH
-
 # java
 export JAVA_HOME=$(/usr/libexec/java_home)
 export PATH=$PATH:$JAVA_HOME/bin
 
 export GITAWAREPROMPT="$DOTFILES_HOME/git-aware-prompt"
 source $GITAWAREPROMPT/main.sh
-export PS1="\w \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ "
+export PS1="\w \[$txtgrn\](\$(~/.rvm/bin/rvm-prompt v)) \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ "
 
 export SUDO_PS1="\[$bakred\]\u@\h\[$txtrst\] \w\$ "
 
@@ -97,6 +101,14 @@ fi
 # rvm
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+# python
+alias qtpython="ipython qtconsole --pylab=inline"
+
+# pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 
 # mono
 export MONO_GAC_PREFIX='/usr/local'

@@ -14,10 +14,12 @@ alias grep='grep --color=auto'
 alias rgrep='grep -r'
 alias rbgrep='rgrep --include \*.rb'
 
-function rspec-without-terminal-kill {
-  trap 'stty echo' EXIT
-  trap 'echo "foobar trap"' EXIT
-  bundle exec rspec $@
-}
+#alias bundle=~/bin/bundle-and-ctags
 
-alias rspec="trap 'stty echo' EXIT && trap 'echo \"foobar trap\"' EXIT && bundle exec rspec $@"
+#function rspec-without-terminal-kill {
+#  trap 'stty echo' EXIT
+#  trap 'echo "foobar trap"' EXIT
+#  bundle exec rspec $@
+#}
+
+#alias rspec="trap 'stty echo' EXIT && trap 'echo \"foobar trap\"' EXIT && bundle exec rspec $@"
