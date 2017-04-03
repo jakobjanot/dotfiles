@@ -1,6 +1,11 @@
 ---
-#BUNDLE_PATH: vendor/bundle
-BUNDLE_BUILD__NOKOGIRI: "--use-system-libraries"
-#BUNDLE_BUILD__NOKOGIRI: "--use-system-libraries --with-xslt-include=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/include/libxslt --with-xml2-include=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/include/libxml2"
-BUNDLE_BUILD__LIBV8: "--with-system-v8"
-BUNDLE_CONSOLE: pry
+BUNDLE_CONSOLE: "pry"
+BUNDLE_GEM__TEST: "minitest"
+BUNDLE_GEM__COC: "false"
+BUNDLE_GEM__MIT: "false"
+BUNDLE_DISABLE_LOCAL_BRANCH_CHECK: "true"
+BUNDLE_BUILD__PUMA: "--with-opt-dir=/usr/local/opt/openssl"
+# BUNDLE_LOCAL__XML_TOOLBOX: "/Users/u0157312/src/xml-toolbox"
+# BUNDLE_BUILD__NOKOGIRI: "--use-system-libraries=true --with-xml2-include=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/usr/include/libxml2"
+#BUNDLE_LOCAL__SHOPIFY_THEME: "/Users/u0157312/src/shopify_theme"
+BUNDLE_GIT__ALLOW_INSECURE: "true"
