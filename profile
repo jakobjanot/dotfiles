@@ -32,12 +32,6 @@ shopt -s extglob
 # Save and reload the history after each command finishes
 # export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 
-# Rubymotion Android SDK
-if [ -d "$HOME/.rubymotion-android" ]; then
-  export RUBYMOTION_ANDROID_SDK="$HOME/.rubymotion-android/sdk"
-  export RUBYMOTION_ANDROID_NDK="$HOME/.rubymotion-android/ndk"
-fi
-
 # docker
 #if [ -d "$HOME/.boot2docker" ]; then
 #  export DOCKER_TLS_VERIFY=1

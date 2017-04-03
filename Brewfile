@@ -1,7 +1,4 @@
 ## Brew taps
-tap 'caskroom/cask'
-
-cask 'java'
 
 # Brew packages
 brew 'ant'
@@ -28,7 +25,6 @@ brew 'openssl'
 brew 'ossp-uuid'
 brew 'pkg-config'
 brew 'postgresql'
-brew 'readline'
 brew 'redis'
 brew 'rename'
 brew 'ruby-build'
@@ -37,6 +33,7 @@ brew 'sqlite'
 brew 'libyaml'
 
 # Cask applications
+cask 'java'
 cask 'cyberduck'
 cask 'docker'
 cask 'eclipse-java'
@@ -48,6 +45,7 @@ cask 'postico'
 cask 'rdm'
 cask 'sourcetree'
 cask 'sublime-text'
+cask 'tidal'
 cask 'virtualbox'
 cask 'xquartz'
 
