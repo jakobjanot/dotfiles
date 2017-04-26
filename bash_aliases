@@ -24,5 +24,6 @@ alias rbgrep='rgrep --include \*.rb'
 
 #alias rspec="trap 'stty echo' EXIT && trap 'echo \"foobar trap\"' EXIT && bundle exec rspec $@"
 
-alias trash="rmtrash"
-alias rm="echo Use 'trash', or the full path i.e. '/bin/rm'"
+alias trash='rmtrash'
+alias trashdir='rmdirtrash'
+alias sudo='sudo '

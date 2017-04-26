@@ -12,8 +12,8 @@ export PATH=:~/bin:/usr/local/bin:/bin:/sbin:/usr/bin:$PATH
 export LC_CTYPE=da_DK.UTF-8
 export LC_ALL=da_DK.UTF-8
 
-export EDITOR="atom -W"
-export VISUAL="atom -W"
+export EDITOR="subl -n -w"
+export VISUAL="subl -n -w"
 
 # Replace bsdtar with gnutar
 export PATH="/usr/local/opt/gnu-tar/libexec/gnubin:$PATH"
@@ -74,14 +74,14 @@ if [ -f $(brew --prefix)/etc/bash_completion ]; then
 fi
 
 # oracle instantclient
-ORACLE_HOME="/opt/oracle/instantclient_11_2"
-if [ -d $ORACLE_HOME ]; then
-	export NLS_LANG="AMERICAN_AMERICA.UTF8" # or DANISH_DENMARK.WE8ISO8859P1
-	export OCI_DIR=$ORACLE_HOME
-	export DYLD_FALLBACK_LIBRARY_PATH=$DYLD_LIBRARY_PATH
-	export TNS_ADMIN="$ORACLE_HOME" # or where you will place tnsnames.ora
-	export PATH="$PATH:$ORACLE_HOME"
-fi
+# ORACLE_HOME="/opt/oracle/instantclient_11_2"
+# if [ -d $ORACLE_HOME ]; then
+# 	export NLS_LANG="AMERICAN_AMERICA.UTF8" # or DANISH_DENMARK.WE8ISO8859P1
+# 	export OCI_DIR=$ORACLE_HOME
+# 	export DYLD_FALLBACK_LIBRARY_PATH=$DYLD_LIBRARY_PATH
+# 	export TNS_ADMIN="$ORACLE_HOME" # or where you will place tnsnames.ora
+# 	export PATH="$PATH:$ORACLE_HOME"
+# fi
 
 # llvm
 #export LDFLAGS-L/usr/local/opt/llvm/lib
