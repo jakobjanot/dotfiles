@@ -1,4 +1,6 @@
 ## Brew taps
+tap 'drujensen/kgen'
+brew 'kgen'
 
 # Brew packages
 brew 'ant'
@@ -6,6 +8,7 @@ brew 'autoconf'
 brew 'bash-completion'
 brew 'cmake'
 brew 'coreutils'
+brew 'crystal-lang'
 brew 'dwdiff'
 brew 'freetype'
 brew 'gettext'
@@ -53,6 +56,7 @@ cask 'sourcetree'
 cask 'sublime-text'
 cask 'tidal'
 cask 'virtualbox'
+cask 'whatsapp'
 cask 'xquartz'
 
 # App Store applications

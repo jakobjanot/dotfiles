@@ -73,15 +73,9 @@ if [ -f $(brew --prefix)/etc/bash_completion ]; then
 . $(brew --prefix)/etc/bash_completion
 fi
 
-# oracle instantclient
-# ORACLE_HOME="/opt/oracle/instantclient_11_2"
-# if [ -d $ORACLE_HOME ]; then
-# 	export NLS_LANG="AMERICAN_AMERICA.UTF8" # or DANISH_DENMARK.WE8ISO8859P1
-# 	export OCI_DIR=$ORACLE_HOME
-# 	export DYLD_FALLBACK_LIBRARY_PATH=$DYLD_LIBRARY_PATH
-# 	export TNS_ADMIN="$ORACLE_HOME" # or where you will place tnsnames.ora
-# 	export PATH="$PATH:$ORACLE_HOME"
-# fi
+# nvm
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
 
 # llvm
 #export LDFLAGS-L/usr/local/opt/llvm/lib
