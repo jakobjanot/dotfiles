@@ -6,17 +6,20 @@ then
 fi
 
 DOTFILES_HOME=$HOME/dotfiles
-export PATH=:~/bin:/usr/local/bin:/bin:/sbin:/usr/bin:$PATH
+export PATH=:~/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:$PATH
 
 # Set language - ensure Terminal.app doesn't overwrite it
 export LC_CTYPE=da_DK.UTF-8
 export LC_ALL=da_DK.UTF-8
 
-export EDITOR="subl -n -w"
-export VISUAL="subl -n -w"
+export EDITOR="vim"
+export VISUAL="atom --wait"
 
 # Replace bsdtar with gnutar
 export PATH="/usr/local/opt/gnu-tar/libexec/gnubin:$PATH"
+
+# Gemfury
+export GEM_FURY_KEY=13xcCA-2U4tlJVqRQTuTSDzEtj9QtR5HE
 
 # Color OS X Command Prompt
 export CLICOLOR=1export
@@ -32,13 +35,6 @@ shopt -s extglob
 # Save and reload the history after each command finishes
 # export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 
-# docker
-#if [ -d "$HOME/.boot2docker" ]; then
-#  export DOCKER_TLS_VERIFY=1
-#  export DOCKER_HOST=tcp://192.168.59.103:2376
-#  export DOCKER_CERT_PATH=~/.boot2docker/certs/boot2docker-vm
-#fi
-
 [ "$TERM" = "xterm" ] && TERM="xterm-256color"
 
 function ppgrep() { pgrep "$@" | xargs ps -f -p; }
@@ -53,15 +49,12 @@ export PS1="\w \[$txtgrn\](\$(~/.rvm/bin/rvm-prompt v)) \[$txtcyn\]\$git_branch\
 
 export SUDO_PS1="\[$bakred\]\u@\h\[$txtrst\] \w\$ "
 
-# rbenv
-if [ -d "$HOME/.rbenv" ]; then
-  export PATH="$HOME/.rbenv/bin:$PATH"
-  eval "$(rbenv init -)"
-fi
+# fuzzy finding in bash
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 # rubocop
-export RUBOCOP_HOME=$HOME/.rvm/gems/ruby-2.1.5/bin #"$(dirname $(which rubocop))"
-export PATH="$RUBOCOP_HOME:$PATH"
+#export RUBOCOP_HOME=$HOME/.rvm/gems/ruby-2.1.5/bin #"$(dirname $(which rubocop))"
+#export PATH="$RUBOCOP_HOME:$PATH"
 
 # bash aliases
 if [ -f $DOTFILES_HOME/bash_aliases ]; then
@@ -73,18 +66,15 @@ if [ -f $(brew --prefix)/etc/bash_completion ]; then
 . $(brew --prefix)/etc/bash_completion
 fi
 
-# nvm
-export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
+# todo.txt
+if which todo.sh > /dev/null; then eval "alias t=todo.sh"; fi
 
 # llvm
 #export LDFLAGS-L/usr/local/opt/llvm/lib
 #CPPFLAGS: -I/usr/local/opt/llvm/include
 
-# perlbrew
-if [ -s ~/perl5/perlbrew/etc/bashrc ]; then
-	source ~/perl5/perlbrew/etc/bashrc
-fi
+# plenv
+if which plenv > /dev/null; then eval "$(plenv init -)"; fi
 
 # rvm
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
@@ -100,3 +90,18 @@ if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 
 # mono
 export MONO_GAC_PREFIX='/usr/local'
+
+# emscripten
+if [ -d /opt/emsdk ]; then
+  export PATH=$PATH:/opt/emsdk:/opt/emsdk/clang/e1.37.21_64bit:/opt/emsdk/node/4.1.1_64bit/bin:/opt/emsdk/emscripten/1.37.21
+  source /opt/emsdk/emsdk_env.sh > /dev/null
+fi
+
+# pkgconfig
+export PKG_CONFIG_PATH="/usr/local/opt/pkgconfig:$PKG_CONFIG_PATH"
+
+# nvm
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
+NODE_DEFAULT_VERSION=$(<"$NVM_DIR/alias/default")
+export PATH="$NVM_DIR/versions/node/$NODE_DEFAULT_VERSION/bin":$PATH

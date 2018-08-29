@@ -14,6 +14,9 @@ alias grep='grep --color=auto'
 alias rgrep='grep -r'
 alias rbgrep='rgrep --include \*.rb'
 
+alias xopen='open -a "Oxygen XML Editor"'
+alias xaopen='open -a "Oxygen XML Author"'
+alias xdopen='open -a "Oxygen XML Developer"'
 #alias bundle=~/bin/bundle-and-ctags
 
 #function rspec-without-terminal-kill {
